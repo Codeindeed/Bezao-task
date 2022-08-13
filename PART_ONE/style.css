@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800;900&family=Lato:wght@400;900&display=swap');
+
+:root {
+    --color-primary: #f24822;
+    --color-text: #fff;
+    --color-plate: #ffcd29;
+    --font-family: 'Inter', sans-serif;
+    --font-family-secondary: 'Lato', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+    font-family: var(--font-family);
+}
+
+.main {
+    background-image: linear-gradient(to right, rgba(242, 72, 34, 0.806), #ffcd29e7), url(./IMG/noodle_PNG77\ 1.jpg);
+    background-size: 100%;
+    min-height: 100vh;
+    background-position: center;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    padding: 3rem 6rem;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--color-text)
+}
+
+.button {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    background-color: transparent;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.mealsbody {
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+    max-width: 100vw;
+    margin-top: auto;
+    padding: 3rem 6rem;
+    padding-bottom: 0;
+    margin-top: 2rem;
+}
+
+.mealsbody__text {
+    width: 100%;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.header__text {
+    font-family: var(--font-family);
+    color: var(--color-text);
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.header__text--header {
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.header__text--content {
+    width: 70%;
+    font-size: 1.5rem;
+    font-family: var(--font-family-secondary);
+}
+
+.mealsbody__price {
+    display: grid;
+    grid-gap: .7rem;
+}
+
+.text {
+    font-size: 1.3rem;
+    font-family: var(--font-family-secondary);
+    color: var(--color-text);
+    font-weight: 400;
+}
+
+.price--text {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-text);
+}
+
+.mealsbody__image {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    max-width: 50rem;
+}
+
+.img__body {
+    width: 100%;
+}
+
+.image__container {
+    background-color: #ffcd299f;
+    width: 100%;
+    padding: 3.5rem;
+    border-radius: 1000px;
+}
+
+.image__container img {
+    width: 100%;
+    border-radius: 10000px;
+}
+
+.image--text {
+    width: 100%;
+}
+
+.image--recipe {
+    text-align: center;
+    display: inline-block;
+}
+
+
+.mealsbody__aside {
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.aside__body {
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    position: relative;
+}
+
+.scroll__text {
+    width: 100%;
+    padding-left: 1rem;
+    height: 100%;
+    color: var(--color-text);
+    position: relative;
+}
+
+.scroll--texts {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    position: absolute;
+    width: 30rem;
+    top: 40%;
+    right: -90%;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+}
+
+.food__container {
+    order: 1;
+    background-color: var(--color-text);
+    height: 100%;
+    padding: 2rem 1rem;
+    border-radius: 1000px;
+}
+
+.container {
+    padding: 1rem;
+    border-radius: 1000px;
+}
+
+.container img {
+    width: 10rem;
+    border-radius: 1000px;
+}
+
+.text__aside {
+    justify-self: end;
+    text-align: end;
+}
+
+.arrow__button {
+    border: 1px solid var(--color-text);
+    padding: 1rem 2rem;
+    position: absolute;
+    border-radius: 2rem;
+    top: 80%;
+    left: 53%;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
