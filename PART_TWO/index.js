@@ -60,17 +60,21 @@ function Login() {
   }
 }
 function addFood() {
-  let food = addname.value;
-  let price = addprice.value;
-  let newFood = {
-    food: food,
-    price: `N ${price}`,
-    id: `${food + price}`,
-  };
-  addname.value = "";
-  addprice.value = "";
-  displayedFood.push(newFood);
-  displayFood();
+  if (addname.value == "" || addprice.value == "") {
+    alert("Please fill in all fields");
+  } else {
+    let food = addname.value;
+    let price = addprice.value;
+    let newFood = {
+      food: food,
+      price: `N ${price}`,
+      id: `${food + price}`,
+    };
+    addname.value = "";
+    addprice.value = "";
+    displayedFood.push(newFood);
+    displayFood();
+  }
 }
 function onScreenFood() {
   container.innerHTML = "";
@@ -104,7 +108,6 @@ function removefoods() {
   let foods = document.querySelectorAll(".fa");
   foods.forEach((food) => {
     food.addEventListener("click", () => {
-      console.log(food.getAttribute("id"));
       removeFood(food.getAttribute("id"));
     });
   });
@@ -129,7 +132,6 @@ function displayFood() {
   let foods = document.querySelectorAll(".fas");
   foods.forEach((food) => {
     food.addEventListener("click", () => {
-      console.log(food.getAttribute("id"));
       addOnscreen(food.getAttribute("id"));
     });
   });
@@ -149,7 +151,6 @@ function addOnscreen(id) {
 }
 function removeFood(id) {
   const index = onscreenFood.findIndex((object) => {
-    console.log(object);
     return id == object.id;
   });
   onscreenFood.splice(index, 1);
@@ -159,12 +160,10 @@ function removeFood(id) {
 function logouts() {
   menuSystem.classList.add("hide");
   container.classList.remove("hide");
-  console.log("hello");
 }
 logout.addEventListener("click", logouts);
 loginButton.addEventListener("click", function () {
   loginmenu.classList.toggle("hide");
-  console.log("hello");
 });
 login.addEventListener("click", (e) => {
   e.preventDefault();
