@@ -84,7 +84,7 @@ function onScreenFood() {
     foodDiv.innerHTML = `
             <div class="food__card">
                 <h1>${food.food}</h1>
-                <p class="content" id=${food.id}>${food.price}</p>
+                <p class="content" id=${food.id}>price: ${food.price} </p>
             </div>
     `;
     container.appendChild(foodDiv);
@@ -169,7 +169,6 @@ login.addEventListener("click", (e) => {
   e.preventDefault();
   Login();
 });
-
 add.addEventListener("click", (e) => {
   e.preventDefault();
   addFood();
