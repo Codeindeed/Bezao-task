@@ -161,8 +161,12 @@ function logouts() {
   menuSystem.classList.add("hide");
   container.classList.remove("hide");
 }
-logout.addEventListener("click", logouts);
-loginButton.addEventListener("click", function () {
+logout.addEventListener("click", (e)=>{
+  e.preventDefault();
+  logouts();
+});
+loginButton.addEventListener("click", function (e) {
+  e.preventDefault();
   loginmenu.classList.toggle("hide");
 });
 login.addEventListener("click", (e) => {
@@ -174,5 +178,6 @@ add.addEventListener("click", (e) => {
   addFood();
 });
 removefoods();
+
 displayFood();
 onScreenFood();
